@@ -3,7 +3,7 @@ import type { Bowler } from "./types/bowler";
 
 function BowlerList () {
 
-    const [foods, setBowlers] = useState<Bowler[]>([]);
+    const [bowlers, setBowlers] = useState<Bowler[]>([]);
 
     useEffect(() => {
         const fetchBowlers = async () => {
@@ -17,8 +17,6 @@ function BowlerList () {
 
     return (
         <>
-            <h1>Bowlers Leaque Members</h1>
-            <h2>This table displays all of the members and their information!</h2>
             <table>
                 <thead>
                     <tr>
@@ -33,7 +31,7 @@ function BowlerList () {
                 </thead>
                 <tbody>
                     {
-                        foods.map((b) => (
+                        bowlers.map((b) => (
                             <tr key={b.fullName}>
                                 <td>{b.fullName}</td>
                                 <td>{b.teamName}</td>
