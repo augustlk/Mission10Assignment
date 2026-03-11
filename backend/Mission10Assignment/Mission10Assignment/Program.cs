@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<BowlingContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("BowlingDbContext")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("BowlingContext")));
 
 builder.Services.AddCors(options =>
 {
